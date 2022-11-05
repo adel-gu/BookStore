@@ -3,20 +3,23 @@ import AddBook from '../components/AddBook';
 import Book from '../components/Book';
 
 const Books = () => {
-  const [books, setBooks] = useState([
+  const [books] = useState([
     {
+      id: 0,
       title: 'The Hunger Games',
       author: 'Suzanne Collins',
     },
     {
+      id: 1,
       title: 'Dune',
       author: 'Frank Herbet',
     },
   ]);
+
   return (
     <>
       {books.map((book) => (
-        <Book book={book} />
+        <Book key={book.id} book={book} />
       ))}
       <AddBook />
     </>
