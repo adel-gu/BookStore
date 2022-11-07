@@ -15,11 +15,9 @@ const categoriesReducer = (state = categories, action) => {
 };
 
 // Action Creatores
-export const statusCheckAct = () => {
-  return {
-    type: STATUS_CHECK,
-  };
-};
+export const statusCheckAct = () => ({
+  type: STATUS_CHECK,
+});
 
 // Exports
 export default categoriesReducer;
