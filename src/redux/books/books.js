@@ -22,14 +22,14 @@ const BooksReducer = (state = books, action) => {
 };
 
 // Action Creators
-const addBookAct = (book) => {
+export const addBookAct = (book) => {
   return {
     type: ADD_BOOK,
     book: book,
   };
 };
 
-const removeBookAct = (bookID) => {
+export const removeBookAct = (bookID) => {
   return {
     type: REMOVE_BOOK,
     id: bookID,
@@ -38,4 +38,3 @@ const removeBookAct = (bookID) => {
 
 // Exports
 export default BooksReducer;
-export { addBookAct, removeBookAct };
