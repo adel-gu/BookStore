@@ -8,13 +8,13 @@ import { addBook } from "../redux/books/books";
 import {v4 as uuidv4} from 'uuid';
 
 const AddBookForm = (props) => {
-  const [book, setBook] = useState({id:uuidv4()})
+  const [book, setBook] = useState({})
   
   const dispatch = useDispatch();
 
   const getInputValue = (e) => {
     setBook({
-      ...book,
+      id:uuidv4(),
       [e.target.name]: e.target.value,
     })
   }
