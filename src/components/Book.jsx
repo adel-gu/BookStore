@@ -1,4 +1,11 @@
+// Redux useDispatch 
+import { useDispatch } from "react-redux";
+// RemoveBook action creatore
+import { removeBook } from "../redux/books/books";
+
 const Book = (props) => { 
+  const dispatch = useDispatch();
+
   return (
     <div className="book-card">
       <div className="action">
@@ -6,9 +13,9 @@ const Book = (props) => {
         <h1>{props.book.title}</h1>
         <p>{props.book.author}</p>
         <ul>
-          <li><a>Comments</a> |</li>
-          <li><a>Remove</a> |</li>
-          <li><a>Edit</a></li>
+          <li><button type="button">Comments</button > |</li>
+          <li><button type="button" onClick={() => dispatch(removeBook(props.book.id))}>Remove</button > |</li>
+          <li><button type="button">Edit</button ></li>
         </ul>
       </div>
       <div className="progress">

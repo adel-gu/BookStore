@@ -9,23 +9,23 @@ const books = [];
 const BooksReducer = (state = books, action) => {
   switch (action.type) {
     case ADD_BOOK:
-      return state.push(action.book);
+      return [...state, action.payload];
     case REMOVE_BOOK:
-      return state.filter((book) => book.id !== action.id);
+      return state.filter((book) => book.id !== action.payload);
     default:
       return state;
   }
 };
 
 // Action Creators
-export const addBookAct = (book) => ({
+export const addBook = (payload) => ({
   type: ADD_BOOK,
-  book,
+  payload,
 });
 
-export const removeBookAct = (bookID) => ({
+export const removeBook = (payload) => ({
   type: REMOVE_BOOK,
-  id: bookID,
+  payload,
 });
 
 // Exports
