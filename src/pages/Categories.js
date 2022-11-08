@@ -10,10 +10,9 @@ const Categories = () => {
   return (
     <>
       <button
-        type='button'
+        type="button"
         onClick={() => {
           dispatch(statusCheck());
-          console.log(status);
         }}
       >
         Check status

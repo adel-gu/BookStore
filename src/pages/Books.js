@@ -1,5 +1,3 @@
-import { useState } from 'react';
-
 // Redux useSelector
 import { useSelector } from 'react-redux';
 
