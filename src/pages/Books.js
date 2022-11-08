@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { useSelector } from 'react-redux';
 
 // Components
-import AddBook from '../components/AddBook';
+import AddBookForm from '../components/AddBookForm';
 import Book from '../components/Book';
 
 const Books = () => {
@@ -15,7 +15,7 @@ const Books = () => {
       {books.map((book) => (
         <Book key={book.id} book={book} />
       ))}
-      <AddBook />
+      <AddBookForm />
     </>
   );
 };

@@ -7,7 +7,7 @@ import { addBook } from "../redux/books/books";
 // Id provider library
 import {v4 as uuidv4} from 'uuid';
 
-const AddBook = (props) => {
+const AddBookForm = (props) => {
   const [book, setBook] = useState({id:uuidv4()})
   
   const dispatch = useDispatch();
@@ -42,4 +42,4 @@ const AddBook = (props) => {
   )
 }
 
-export default AddBook;
+export default AddBookForm;
