@@ -14,6 +14,7 @@ const AddBookForm = (props) => {
 
   const getInputValue = (e) => {
     setBook({
+      ...book,
       id:uuidv4(),
       [e.target.name]: e.target.value,
     })
@@ -23,15 +24,16 @@ const AddBookForm = (props) => {
     <form action="/action_page.php" onSubmit={(e) => {
       e.preventDefault()
       dispatch(addBook(book))
+      e.target.reset()
       }}>
       <fieldset>
         <legend>Add New Book</legend>
         <ul>
           <li>
-            <input type="text" name="title" placeholder="Book title" onChange={(e) => getInputValue(e)}/>
+            <input type="text" name="title" placeholder="Book title" required onChange={(e) => getInputValue(e)}/>
           </li>
           <li>
-            <input type="text" name="author" placeholder="Author" onChange={(e) => getInputValue(e)}/>
+            <input type="text" name="author" placeholder="Author" required onChange={(e) => getInputValue(e)}/>
           </li>
           <li>
             <button type="submit" >Add Book</button>
