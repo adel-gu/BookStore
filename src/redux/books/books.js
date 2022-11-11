@@ -9,8 +9,12 @@ const LOAD_BOOKS = 'books/LOAD_BOOKS';
 
 // Thunks
 export const loadBooks = createAsyncThunk(LOAD_BOOKS, async () => {
-  const res = await BooksService.getBooks();
-  return res.data;
+  try {
+    const res = await BooksService.getBooks();
+    return res.data;
+  } catch (err) {
+    throw new Error(err);
+  }
 });
 
 // Slice
