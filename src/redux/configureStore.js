@@ -1,13 +1,13 @@
 import { configureStore, applyMiddleware } from '@reduxjs/toolkit';
 import thunk from 'redux-thunk';
-// Reducers
-import BooksReducer from './books/books';
+// Slices
+import booksSlice from './books/books';
 import categoriesReducer from './categories/categories';
 
-//
+// combine slices reducers
 const rootReducer = {
   reducer: {
-    books: BooksReducer,
+    books: booksSlice.reducer,
     categories: categoriesReducer,
   },
 };
