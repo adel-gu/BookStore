@@ -3,18 +3,18 @@ import { useDispatch } from "react-redux";
 // RemoveBook action creatore
 import { removeBook } from "../redux/books/books";
 
-const Book = (props) => { 
+const Book = ({id, title, author, category}) => { 
   const dispatch = useDispatch();
-
+  
   return (
     <div className="book-card">
       <div className="action">
-        <h4>Action</h4>
-        <h1>{props.book.title}</h1>
-        <p>{props.book.author}</p>
+        <h4>{category}</h4>
+        <h1>{title}</h1>
+        <p>{author}</p>
         <ul>
           <li><button type="button">Comments</button > |</li>
-          <li><button type="button" onClick={() => dispatch(removeBook(props.book.id))}>Remove</button > |</li>
+          <li><button type="button" onClick={() => dispatch(removeBook(id))}>Remove</button > |</li>
           <li><button type="button">Edit</button ></li>
         </ul>
       </div>
