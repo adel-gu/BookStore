@@ -6,9 +6,7 @@ const getBooks = () => {
 };
 
 // Add a book
-const postBook = (data) => {
-  return http.post('', data);
-};
+const postBook = (data) => http.post('', JSON.stringify(data));
 
 const BooksService = {
   getBooks,

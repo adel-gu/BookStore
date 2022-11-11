@@ -3,7 +3,7 @@ import { useState } from "react";
 //  Dispatch
 import { useDispatch } from "react-redux";
 // addBook Component
-import { addBook } from "../redux/books/books";
+import { addBook, loadBooks} from "../redux/books/books";
 // Id provider library
 import {v4 as uuidv4} from 'uuid';
 
@@ -12,28 +12,32 @@ const AddBookForm = (props) => {
   
   const dispatch = useDispatch();
 
-  const getInputValue = (e) => {
+  const handleInputChange = (e) => {
     setBook({
       ...book,
-      id:uuidv4(),
+      item_id:uuidv4(),
       [e.target.name]: e.target.value,
+      category: 'Action'
     })
   }
   
   return (
-    <form action="/action_page.php" onSubmit={(e) => {
+    <form onSubmit={(e) => {
       e.preventDefault()
+      console.log("this is the book", book)
       dispatch(addBook(book))
+      dispatch(loadBooks())
+      // console.log(book)
       e.target.reset()
       }}>
       <fieldset>
         <legend>Add New Book</legend>
         <ul>
           <li>
-            <input type="text" name="title" placeholder="Book title" required onChange={(e) => getInputValue(e)}/>
+            <input type="text" name="title" placeholder="Book title" required onChange={(e) => handleInputChange(e)}/>
           </li>
           <li>
-            <input type="text" name="author" placeholder="Author" required onChange={(e) => getInputValue(e)}/>
+            <input type="text" name="author" placeholder="Author" required onChange={(e) => handleInputChange(e)}/>
           </li>
           <li>
             <button type="submit" >Add Book</button>
