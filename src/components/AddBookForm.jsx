@@ -3,7 +3,7 @@ import { useState } from "react";
 //  Dispatch
 import { useDispatch } from "react-redux";
 // addBook Component
-import { addBook, loadBooks} from "../redux/books/books";
+import { addBook } from "../redux/books/books";
 // Id provider library
 import {v4 as uuidv4} from 'uuid';
 
@@ -17,7 +17,6 @@ const AddBookForm = (props) => {
       ...book,
       item_id:uuidv4(),
       [e.target.name]: e.target.value,
-      category: 'Action'
     })
   }
   
@@ -25,7 +24,6 @@ const AddBookForm = (props) => {
     <form onSubmit={(e) => {
       e.preventDefault()
       dispatch(addBook(book))
-      // console.log(book)
       e.target.reset()
       }}>
       <fieldset>
@@ -36,6 +34,9 @@ const AddBookForm = (props) => {
           </li>
           <li>
             <input type="text" name="author" placeholder="Author" required onChange={(e) => handleInputChange(e)}/>
+          </li>
+          <li>
+            <input type="text" name="category" placeholder="Category" required onChange={(e) => handleInputChange(e)}/>
           </li>
           <li>
             <button type="submit" >Add Book</button>
