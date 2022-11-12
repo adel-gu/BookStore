@@ -12,16 +12,16 @@ const AddBookForm = (props) => {
   
   const dispatch = useDispatch();
 
-  const getInputValue = (e) => {
+  const handleInputChange = (e) => {
     setBook({
       ...book,
-      id:uuidv4(),
+      item_id:uuidv4(),
       [e.target.name]: e.target.value,
     })
   }
   
   return (
-    <form action="/action_page.php" onSubmit={(e) => {
+    <form onSubmit={(e) => {
       e.preventDefault()
       dispatch(addBook(book))
       e.target.reset()
@@ -30,10 +30,13 @@ const AddBookForm = (props) => {
         <legend>Add New Book</legend>
         <ul>
           <li>
-            <input type="text" name="title" placeholder="Book title" required onChange={(e) => getInputValue(e)}/>
+            <input type="text" name="title" placeholder="Book title" required onChange={(e) => handleInputChange(e)}/>
           </li>
           <li>
-            <input type="text" name="author" placeholder="Author" required onChange={(e) => getInputValue(e)}/>
+            <input type="text" name="author" placeholder="Author" required onChange={(e) => handleInputChange(e)}/>
+          </li>
+          <li>
+            <input type="text" name="category" placeholder="Category" required onChange={(e) => handleInputChange(e)}/>
           </li>
           <li>
             <button type="submit" >Add Book</button>
