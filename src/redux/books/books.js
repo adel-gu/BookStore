@@ -38,7 +38,7 @@ export const removeBook = createAsyncThunk(
     } catch (err) {
       throw new Error(err);
     }
-  }
+  },
 );
 
 // Book Store Slice
