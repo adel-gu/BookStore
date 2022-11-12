@@ -1,16 +1,22 @@
 import http from '../http-common';
 
-// Retrieve data
-const getBooks = () => {
+// Retrieve Books
+const getBooksServ = () => {
   return http.get();
 };
 
 // Add a book
-const postBook = (data) => http.post('', JSON.stringify(data));
+const postBookServ = (data) => http.post('', data);
+
+// Remove a Book
+const delBookServ = (id) => {
+  return http.delete(`/${id}`);
+};
 
 const BooksService = {
-  getBooks,
-  postBook,
+  getBooksServ,
+  postBookServ,
+  delBookServ,
 };
 
 export default BooksService;
