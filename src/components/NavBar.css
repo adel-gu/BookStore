@@ -1,0 +1,12 @@
+.navbar-brand.logo {
+  color: #0290ff;
+  font-size: 1.875rem;
+  font-weight: bold;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.navbar-nav .book-nav-link {
+  font-size: 0.813rem;
+  font-weight: normal;
+  font-family: 'Montserrat', sans-serif;
+}
