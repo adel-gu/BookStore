@@ -100,9 +100,17 @@
   gap: 10px;
 }
 
+.form-grid input.form-control::placeholder {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  font-weight: normal;
+  color: #c4c4c4;
+}
+
 .add-new-book {
   color: #888888;
   font-size: 1.25rem;
   font-weight: bold;
   margin-bottom: 1.88rem;
+  font-family: 'Montserrat', sans-serif;
 }
