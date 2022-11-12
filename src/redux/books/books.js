@@ -21,26 +21,26 @@ export const loadBooks = createAsyncThunk(LOAD_BOOKS, async () => {
 
 // Add a Book
 export const addBook = createAsyncThunk(ADD_BOOK, async (payload, thunkAPI) => {
-  try {
-    await fetch(API_URL, {
-      method: 'POST',
-      body: JSON.stringify({
-        item_id: payload.item_id,
-        title: payload.title,
-        author: payload.author,
-        category: payload.category,
-      }),
-      headers: {
-        'Content-Type': 'application/json',
-      },
-    });
-  } catch (err) {
-    throw new Error(err);
-  }
+  await fetch(API_URL, {
+    method: 'POST',
+    body: JSON.stringify(payload),
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  });
+  thunkAPI.dispatch(loadBooks());
 });
 
 // Remove a book
-export const removeBook = (id) => {};
+export const removeBook = createAsyncThunk(
+  REMOVE_BOOK,
+  async (payload, thunkAPI) => {
+    await fetch(`${API_URL}/${payload}`, {
+      method: 'DELETE',
+    });
+    thunkAPI.dispatch(loadBooks());
+  }
+);
 
 // Slice
 const booksSlice = createSlice({
@@ -58,6 +58,8 @@ const booksSlice = createSlice({
     });
     // Adding a book
     builder.addCase(addBook.fulfilled, (state, action) => {});
+    // Remove a book
+    builder.addCase(removeBook.fulfilled, (state, action) => {});
   },
 });
 

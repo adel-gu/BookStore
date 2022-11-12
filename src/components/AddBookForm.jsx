@@ -24,9 +24,7 @@ const AddBookForm = (props) => {
   return (
     <form onSubmit={(e) => {
       e.preventDefault()
-      console.log("this is the book", book)
       dispatch(addBook(book))
-      dispatch(loadBooks())
       // console.log(book)
       e.target.reset()
       }}>
