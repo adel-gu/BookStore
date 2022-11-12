@@ -49,7 +49,7 @@
   width: 4.25rem;
   height: 4.25rem;
   border: 5px solid var(--clr-primary);
-  border-top-color: var(--clr-border-light); 
+  border-top-color: var(--clr-border-light);
   border-radius: 100%;
   transform: rotate(-45deg);
 }
@@ -88,7 +88,7 @@
   color: white;
   border: none;
   border-radius: 3px;
-  background-color: var(--clr-primary);  
+  background-color: var(--clr-primary);
   font-weight: 300;
   padding: 0.438rem 1.188rem 0.5rem 1.375rem;
 }
@@ -108,7 +108,7 @@
 }
 
 .add-new-book {
-  color: #888888;
+  color: #888;
   font-size: 1.25rem;
   font-weight: bold;
   margin-bottom: 1.88rem;

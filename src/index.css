@@ -4,16 +4,13 @@
   --clr-primary: #0290ff;
   --clr-primary-dark: #4386bf;
   --clr-secondary: #121212;
-  --clr-accent: #888888;
+  --clr-accent: #888;
   --clr-border-light: #e8e8e8;
-
   --fs-normal: 0.875rem;
   --fs-mid: 1.375rem;
   --fs-larg: 2rem;
-
   --fw-normal: normal;
   --fw-bold: bold;
-
   --opacity-half: 0.5;
 }
 
@@ -34,9 +31,11 @@ ul {
   padding: 0;
 }
 
-h1,h2,h3,h4 {
+h1,
+h2,
+h3,
+h4 {
   margin: 0;
-  
 }
 
 .section {
