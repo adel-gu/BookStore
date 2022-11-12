@@ -5,8 +5,7 @@
 > This repo is a Single Page Application that display Books and allows users to Add, Remove and Edit these books 
 
 ## Desktop Preview
-
-## Phone Preview
+![image](https://user-images.githubusercontent.com/68030297/201489721-9cf6edc8-3ee9-481a-b7ea-317c9236b4f0.png)
 
 ## Built With
 
