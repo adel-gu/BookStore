@@ -14,9 +14,9 @@
 - Bootstrap
 - React.js
 
-## Live Demo 
+## Live Demo 🚀
 
-[Live Demo Link](https://livedemo.com)
+Netlify: [app-bookstore](https://app-bookstore.netlify.app/)
 
 ## Getting Started
 To get a local copy up and running follow these simple example steps.
