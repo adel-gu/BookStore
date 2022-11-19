@@ -8,17 +8,17 @@ const Categories = () => {
   const dispatch = useDispatch();
 
   return (
-    <div className='w-50 mx-auto mt-5 pt-3 text-center top-50 start-50'>
+    <div className="w-50 mx-auto mt-5 pt-3 text-center top-50 start-50">
       <button
         type="button"
-        className='primary-btn'
+        className="primary-btn"
         onClick={() => {
           dispatch(statusCheck());
         }}
       >
         Check status
       </button>
-      <h1 className='mt-3'>{status}</h1>
+      <h1 className="mt-3">{status}</h1>
     </div>
   );
 };
