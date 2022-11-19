@@ -1,44 +1,46 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Project Name
+# Books Store
 
-> Description the project.
+> This repo is a Single Page Application that display Books and allows users to Add, Remove and Edit these books 
 
+## Preview
+![image](https://user-images.githubusercontent.com/68030297/201489721-9cf6edc8-3ee9-481a-b7ea-317c9236b4f0.png)
 
 ## Built With
 
-- Major languages
-- Frameworks
-- Technologies used
+- HTML
+- CSS
+- Bootstrap
+- React.js
 
-## Live Demo (if available)
+## Live Demo 
 
 [Live Demo Link](https://livedemo.com)
 
-
 ## Getting Started
-
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
-
-
 To get a local copy up and running follow these simple example steps.
 
-### Prerequisites
-
-### Setup
+- Fork and then Clone this repo using this URL (https://github.com/adel-gu/BookStore.git) 
+- Or download it as a ZIP format from the green button above with the text "Code".
 
 ### Install
-
+Install all the necessary dependencies on your local machine
+```
+npm install
+```
+### Test
+To run and check the tests for the components and the logic code for the app
+```
+npm run test
+```
 ### Usage
+To experience a Demo on your local machine run:
+```
+npm run start
+```
 
-### Run tests
-
-### Deployment
-
-
-
-## Authors
+## Author
 
 👤 **Adel Guitoun**
 
@@ -65,4 +67,4 @@ Give a ⭐️ if you like this project!
 
 ## 📝 License
 
-This project is [MIT](./LICENSE) licensed.
+This project is [MIT](./lICENSE) licensed.
